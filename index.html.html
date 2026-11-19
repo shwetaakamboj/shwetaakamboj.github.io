@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shweta Kamboj – Learning Technologist Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f7f8; --surface:#ffffff; --ink:#132a33; --ink-2:#4a5c63; --line:#dde4e7;
+  --accent:#0b6e72; --accent-ink:#ffffff; --accent-soft:#e2f1f1; --gold:#b9852b;
+  --display:"Sora","Segoe UI",system-ui,sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1a1e; --surface:#16252b; --ink:#e8eff1; --ink-2:#a9bac0; --line:#2a3d44;
+    --accent:#4cc2c4; --accent-ink:#0f1a1e; --accent-soft:#183a3d; --gold:#d6a656;
+    color-scheme: dark;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:20px;padding-right:20px}
+h1,h2,h3{font-family:var(--display);line-height:1.2;margin:0;text-wrap:balance}
+h1{font-size:2.6rem}
+h2{font-size:1.6rem;margin-bottom:6px}
+h3{font-size:1.05rem;margin-bottom:6px}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px}
+.lede{color:var(--ink-2);max-width:62ch}
+section{padding:44px 0;border-top:1px solid var(--line)}
+
+/* Hero */
+header{padding:56px 0 40px}
+.hero .lede{font-size:1.15rem;margin:16px 0 20px;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;padding:0;list-style:none}
+.chips li{background:var(--accent-soft);border-radius:999px;padding:5px 13px;font-size:.9rem;font-weight:600}
+.cta{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;padding:12px 20px;border-radius:8px}
+.cta:hover{opacity:.9}
+.status{margin-top:12px;font-size:.95rem;color:var(--ink-2)}
+.status b{color:var(--ink)}
+
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card p{color:var(--ink-2);font-size:.96rem}
+.card .proof{margin-top:10px;font-size:.88rem;color:var(--ink);border-left:3px solid var(--gold);padding-left:10px}
+.tag{font-size:.78rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:6px}
+
+/* Why */
+.why{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.why li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.why b{color:var(--ink)}
+
+/* Table */
+.tablewrap{overflow-x:auto;margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:.96rem}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
+td.period{white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* Certs */
+.cert .tag{color:var(--gold)}
+
+/* Terms */
+dl.terms{display:grid;grid-template-columns:160px 1fr;gap:10px 20px;margin:20px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+dl.terms dt{font-weight:700}
+dl.terms dd{margin:0;color:var(--ink-2)}
+
+/* Final CTA */
+.final{text-align:left}
+.final .lede{margin:10px 0 20px}
+.email{display:block;margin-top:12px;color:var(--ink-2);font-size:.95rem}
+footer{padding:28px 0 48px;color:var(--ink-2);font-size:.9rem;border-top:1px solid var(--line)}
+
+@media screen and (max-width:820px){
+  .grid,.grid.two{grid-template-columns:1fr}
+  h1{font-size:2.1rem}
+  dl.terms{grid-template-columns:1fr}
+  dl.terms dd{margin-bottom:8px}
+}
+@media print{
+  @page{size:A4 portrait;margin:12mm}
+  :root{--bg:#fff;--surface:#fff;--ink:#132a33;--ink-2:#4a5c63;--line:#dde4e7;--accent:#0b6e72;--accent-ink:#fff;--accent-soft:#e2f1f1;--gold:#b9852b;color-scheme:light}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:12.5px}
+  .wrap{max-width:none;padding-left:0;padding-right:0}
+  header{padding:0 0 16px}
+  section{padding:18px 0}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .card,.why li,tr,dl.terms{break-inside:avoid;page-break-inside:avoid}
+  h2,.eyebrow{break-after:avoid;page-break-after:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap hero">
+  <div class="eyebrow">SAP SuccessFactors Learning Specialist · Gurugram</div>
+  <h1>Shweta Kamboj</h1>
+  <p class="lede">I help companies run SAP SuccessFactors Learning well, so the right people get the right training on time, compliance reaches 100%, and audit records are ready the day someone asks for them.</p>
+  <ul class="chips" aria-label="Core skills">
+    <li>SuccessFactors Learning</li>
+    <li>Assignment Profiles</li>
+    <li>Compliance &amp; GxP</li>
+    <li>Connectors &amp; Data Loads</li>
+    <li>Learning Reporting</li>
+    <li>14+ years experience</li>
+  </ul>
+  <a class="cta" href="mailto:shwetaakamboj@gmail.com?subject=LMS%20role%20or%20project">Email me about your LMS</a>
+  <p class="status"><b>Open to full-time roles and contract projects</b> · On-site, hybrid or remote · Available now</p>
+</header>
+
+<section class="wrap" id="services">
+  <div class="eyebrow">What I do</div>
+  <h2>How I can help your LMS</h2>
+  <p class="lede">As a full-time team member or on a defined contract scope.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>LMS administration and support</h3>
+      <p>Day-to-day running of SuccessFactors Learning: catalog, items, curricula, programs, users, data quality and admin queries.</p>
+      <p class="proof">Ran the LMS for Agilent Technologies' global workforce for over three years.</p>
+    </article>
+    <article class="card">
+      <h3>Assignment automation</h3>
+      <p>Dynamic assignment profiles by role, business unit and profile attributes, with automated reminders and overdue alerts.</p>
+      <p class="proof">Built a new-hire journey that assigns training on Day 1 and nudges on Day 14.</p>
+    </article>
+    <article class="card">
+      <h3>Compliance and audit readiness</h3>
+      <p>GxP and FDA-regulated training, retraining when SOPs change, completion campaigns and audit record pulls.</p>
+      <p class="proof">Compliance programs driven to 100% completion; records ready for FDA inspections.</p>
+    </article>
+    <article class="card">
+      <h3>Bulk loads and migrations</h3>
+      <p>Item and Curriculum connectors for large-scale setup, and phased moves from manual records into the LMS.</p>
+      <p class="proof">Created and deployed 100,000+ trainings; led the phased Pathology migration.</p>
+    </article>
+    <article class="card">
+      <h3>Workflows, reporting and dashboards</h3>
+      <p>Approval workflows, notifications, scheduled reports, surveys and role-based dashboards for leaders.</p>
+      <p class="proof">Spotfire dashboards for leaders and Qlik KPIs for request SLAs.</p>
+    </article>
+    <article class="card">
+      <h3>UAT, admin training and documentation</h3>
+      <p>Test scripts, UAT coordination, admin curricula, SOPs and knowledge bases, so teams can run the system confidently.</p>
+      <p class="proof">Wrote GxP UAT scripts; SPOC for ServiceNow integration UAT.</p>
+    </article>
+  </div>
+</section>
+
+<section class="wrap" id="why">
+  <div class="eyebrow">Why work with me</div>
+  <h2>An LMS specialist who understands the business side</h2>
+  <ul class="why">
+    <li><b>SAP certified</b> in SuccessFactors Learning Management, plus SAP SuccessFactors Learning Expert (SFX) 2022.</li>
+    <li><b>Regulated-industry experience:</b> FDA inspections, GxP testing and audit-ready training records at Agilent Technologies.</li>
+    <li><b>HR background:</b> as a former Talent Acquisition Partner and HR professional, I understand people processes from the business side, not just the system side.</li>
+    <li><b>Recognised results:</b> ranked #1 performer in 2022 and 2024, and the "Streamliner" award for transforming learning through digital innovation.</li>
+    <li><b>Clear documentation:</b> SOPs, knowledge bases and admin curricula that outlast the project.</li>
+  </ul>
+</section>
+
+<section class="wrap" id="work">
+  <div class="eyebrow">Selected work · Agilent Technologies</div>
+  <h2>What I built and what changed</h2>
+  <p class="lede">Real work, described without confidential data.</p>
+  <div class="grid two">
+    <article class="card">
+      <span class="tag">Compliance migration</span>
+      <h3>Pathology: manual FDA training records into the LMS</h3>
+      <p>SOP training was logged by hand and repeated whenever a procedure changed. I moved it into SuccessFactors in phases, linking procedures to curricula with connectors and running GxP UAT.</p>
+      <p class="proof">Audit records now come straight from LMS reports.</p>
+    </article>
+    <article class="card">
+      <span class="tag">Role-based learning</span>
+      <h3>A Role-Based Training overhaul</h3>
+      <p>Created learning profiles for each job role, so every employee was assigned the training their role actually required.</p>
+      <p class="proof">Global completion rose 30% and engagement 15%.</p>
+    </article>
+    <article class="card">
+      <span class="tag">Learner journey</span>
+      <h3>An automated new-hire journey</h3>
+      <p>New Hire Program assigned on Day 1, a reminder on Day 14, custom HTML emails and a branded program cover page.</p>
+      <p class="proof">Onboarding training now starts on Day 1 without manual work.</p>
+    </article>
+    <article class="card">
+      <span class="tag">Learning operations</span>
+      <h3>From Excel trackers to ServiceNow with SLAs</h3>
+      <p>Moved training requests from scattered trackers to SharePoint, then ServiceNow catalog forms, with Qlik dashboards on volume and SLA adherence.</p>
+      <p class="proof">One trackable process, with SLA performance visible to leaders.</p>
+    </article>
+  </div>
+</section>
+
+<section class="wrap" id="experience">
+  <div class="eyebrow">Experience</div>
+  <h2>14+ years, including 10+ in HR, learning and talent</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Organisation</th><th>Role</th><th>Period</th></tr></thead>
+      <tbody>
+        <tr><td>Agilent Technologies</td><td>Talent Acquisition Partner (formerly India Staffing Lead)</td><td class="period">2024 – 2026</td></tr>
+        <tr><td>Agilent Technologies</td><td>LMS Global Training Consultant (SAP SuccessFactors Learning)</td><td class="period">2020 – 2024</td></tr>
+        <tr><td>Agilent Technologies</td><td>Staffing Lead</td><td class="period">2020</td></tr>
+        <tr><td>SAR HR Consultancy</td><td>Assistant Manager – HR</td><td class="period">2019 – 2020</td></tr>
+        <tr><td>HCL</td><td>Senior HR Executive</td><td class="period">2015 – 2018</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="wrap" id="certifications">
+  <div class="eyebrow">Certifications</div>
+  <h2>Credentials</h2>
+  <div class="grid two">
+    <div class="card cert"><span class="tag">SAP Certified</span><h3>SAP SuccessFactors Learning Management</h3><p>Certified Application Associate</p></div>
+    <div class="card cert"><span class="tag">SAP</span><h3>SuccessFactors Learning Expert (SFX)</h3><p>Product Knowledge 2022</p></div>
+    <div class="card cert"><span class="tag">University of Michigan</span><h3>Learning Experience Design</h3><p>Certificate</p></div>
+    <div class="card cert"><span class="tag">IIM Rohtak</span><h3>HR Analytics</h3><p>Including a Talent Metrics project</p></div>
+  </div>
+  <p class="lede" style="margin-top:16px;font-size:.95rem">MCA · MBA (Human Resources) · B.Sc. (Computers)</p>
+</section>
+
+<section class="wrap" id="terms">
+  <div class="eyebrow">How I work</div>
+  <h2>Simple and clear from day one</h2>
+  <dl class="terms">
+    <dt>Engagement</dt><dd>Full-time role, or a contract project (fixed scope or hourly)</dd>
+    <dt>Location</dt><dd>Gurugram: on-site, hybrid or remote</dd>
+    <dt>Availability</dt><dd>Can start immediately</dd>
+    <dt>Data</dt><dd>Your data stays confidential; NDAs welcome</dd>
+  </dl>
+</section>
+
+<section class="wrap final" id="contact">
+  <div class="eyebrow">Get in touch</div>
+  <h2>Have an LMS role or project?</h2>
+  <p class="lede">Email me a short description of the role or project and your timeline. I'll reply with next steps.</p>
+  <a class="cta" href="mailto:shwetaakamboj@gmail.com?subject=LMS%20role%20or%20project">Email me</a>
+  <span class="email">shwetaakamboj@gmail.com</span>
+</section>
+
+<footer class="wrap">© 2026 Shweta Kamboj · SAP SuccessFactors Learning Specialist</footer>
+
+</body>
+</html>
